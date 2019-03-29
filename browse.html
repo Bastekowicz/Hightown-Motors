@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" href="car_uIx_icon.ico">
+  <style>
+  #a{
+  transition:1s;
+  opacity:0.5;
+  }
+  #b{
+  transition:1s;
+  opacity:0.5;
+  }
+  #c{
+  transition:1s;
+  opacity:0.5;
+  }
+  </style>
+  <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/366AB792-C9F1-7441-82F3-718E675FD87D/main.js" charset="UTF-8"></script><script>
+	var quote = ["<q><i>You cannot shake hands with a clenched fist.</i></q> - Indira Gandhi","<q><i>There is nothing permanent except change.</i></q> - Heraclitus","<q><i>If you cannot do great things, do small things in a great way.</i></q> - Napoleon Hill","<q><i>Keep your face always toward the sunshine - and shadows will fall behind you.</i></q> - Walt Whitman","<q><i>You can't blame gravity for falling in love.</i></q> - Albert Einstein"];
+	var number = 0;
+	function Quoter1(){
+		document.getElementById("quote").style.color = "white";
+		setTimeout(Quoter2,2000);
+	}
+	function Quoter2(){
+		Quoter3()
+		document.getElementById("quote").innerHTML= quote[number];
+		number += 1;
+		if (number > 4){
+			number = 0;
+		}
+	}
+	function Quoter3(){
+		document.getElementById("quote").style.color = "grey";
+		setTimeout(Quoter1,6000);
+	}
+	function showFiat(){
+	var x = document.getElementById("fiats");
+	var y = document.getElementById("teslas");
+	var z = document.getElementById("renaults");
+	var a = document.getElementById("a");
+	var b = document.getElementById("b");
+	var c = document.getElementById("c");
+  	 if (x.style.display === "none") {
+ 	   x.style.display = "block";
+	   y.style.display = "none";
+	   z.style.display = "none";
+	   a.style.opacity = "1";
+	   b.style.opacity = "0.5";
+	   c.style.opacity = "0.5";
+ 	 } else {
+ 	   x.style.display =  "none";
+	   a.style.opacity = "0.5";
+	   }
+}
+	function showTesla(){
+	var x = document.getElementById("fiats");
+	var y = document.getElementById("teslas");
+	var z = document.getElementById("renaults");
+	var a = document.getElementById("a");
+	var b = document.getElementById("b");
+	var c = document.getElementById("c");
+  	 if (y.style.display === "none") {
+ 	   y.style.display = "block";
+	   z.style.display = "none";
+	   x.style.display = "none";
+	   b.style.opacity = "1";
+	   a.style.opacity = "0.5";
+	   c.style.opacity = "0.5";
+ 	 } else {
+ 	   y.style.display =  "none";
+	   b.style.opacity = "0.5";
+  	}
+}
+	function showRenault(){
+	var x = document.getElementById("fiats");
+	var y = document.getElementById("teslas");
+	var z = document.getElementById("renaults");
+	var a = document.getElementById("a");
+	var b = document.getElementById("b");
+	var c = document.getElementById("c");
+  	 if (z.style.display === "none") {
+ 	   z.style.display = "block";
+	   y.style.display = "none";
+	   x.style.display = "none";
+	   c.style.opacity = "1";
+	   a.style.opacity = "0.5";
+	   b.style.opacity = "0.5";
+ 	 } else {
+		c.style.opacity = "0.5";
+		z.style.display =  "none";
+  	}
+}
+    </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Hightown Motors</title>
+  </head>
+  <body onload="Quoter1()">
+    <div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+	<li class="nav-item">
+        <a class="nav-link active" href="#">Browse</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" id="quote" style="transition:color 2s"></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="card-body text-center"><h1>Pick Brand</h1></div>
+<div class="container">
+  <div class="row">
+    <div id="a" class="col-4 text-center"><a onclick="showFiat()"><img class="img-fluid" src="fiat.png" height="80px"></div>
+    <div id="b" class="col-4 text-center"><a onclick="showTesla()"><img class="img-fluid" src="tesla.jpg" height="80px"></a></div>
+	<div id="c" class="col-4 text-center"><a onclick="showRenault()"><img class="img-fluid" src="renault.png" height="80px"></a></div>
+  </div>
+</div>
+<hr>
+<!--Can't See... Time to Tab!-->
+<div class="container" id="fiats" style="display:none">
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="maluch.jpg" width="500px">
+		</div>		
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">126</b><br>Engine: <b style="color:red">0.6L</b><br>Mileage : <b style="color:green">5000</b><br>Colour : <b style="color:blue">Sky Blue</b><br>Year : <b style="color:grey">2000</b><br>Doors : <b style="color:red">3</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The 126 is an extremely versatile and budget option; great for showing off at parties.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>130 GBP</h1>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="1500.jpg" width="500px">
+		</div>	
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">1500</b><br>Engine: <b style="color:green">1.5L</b><br>Mileage : <b style="color:green">4000</b><br>Colour : <b style="color:grey">Grey</b><br>Year : <b style="color:grey">1967</b><br>Doors : <b style="color:red">3</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The 1500 just has that vintage look that everybody looks for. It's whole demanour screams "Italy!"</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>23,000 GBP</h1>
+			</div>
+		</div>	
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="500L.jpg" width="500px">
+		</div>		
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">1970 500</b><br>Engine: <b style="color:red">0.9L</b><br>Mileage : <b style="color:#d3e847">43000</b><br>Colour : <b style="color:#d3e847">Sunny Yellow</b><br>Year : <b style="color:grey">1970</b><br>Doors : <b style="color:red">3</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The 1970 500 is a great city car that will make people glance twice. For people who are tired of 'smart' cars.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>7,000 GBP</h1>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="600.jpg" width="500px">
+		</div>		
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">600</b><br>Engine: <b style="color:red">0.6L</b><br>Mileage : <b style="color:#d3e847">76000</b><br>Colour : <b style="color:blue">Water Blue</b><br>Year : <b style="color:grey">1969</b><br>Doors : <b style="color:red">3</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The 600 is a more spacious version of the 500. For those with extra groceries.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>12,000 GBP</h1>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="238.jpg" width="500px">
+		</div>		
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">238</b><br>Engine: <b style="color:#d3e847">1.2L</b><br>Mileage : <b style="color:green">3000</b><br>Colour : <b style="color:grey">Grey</b><br>Year : <b style="color:grey">1983</b><br>Doors : <b style="color:green">5</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The 238 is an amazing vintage camper for a great italian camping expedition. Forget life's worries.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>13,000 GBP</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" id="teslas" style="display:none">
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="modelS.jpg" width="500px">
+		</div>	
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Model S</b><br>Range: <b style="color:#d3e847">335 Miles</b><br>Mileage : <b style="color:green">5</b><br>Colour : <b style="color:black">Black</b><br>Year : <b style="color:green">2013</b><br>Doors : <b style="color:green">5</b><br>Fuel : <b style="color:blue">Electric</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The Model S is built from the ground up as an electric vehicle. Nothing screams future like Tesla.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>53,000 GBP</h1>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="roadster.jpg" width="500px">
+		</div>
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Roadster</b><br>Range: <b style="color:green">620 Miles</b><br>Mileage : <b style="color:blue">0</b><br>Colour : <b style="color:red">Red</b><br>Year : <b style="color:blue">2020</b><br>Doors : <b style="color:red">3</b><br>Fuel : <b style="color:blue">Electric</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>Can you even reach the top speed with the Tesla Roadster? I don't think so.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>190,000 GBP</h1>
+			</div>
+		</div>		
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="modelY.jpg" width="500px">
+		</div>
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Model Y</b><br>Range: <b style="color:#d3e847">300 Miles</b><br>Mileage : <b style="color:blue">5</b><br>Colour : <b style="color:black">Black</b><br>Year : <b style="color:blue">2019</b><br>Doors : <b style="color:green">5</b><br>Fuel : <b style="color:blue">Electric</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The all in one electric SUV or in short: Model Y. The future is now.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>43,000 GBP</h1>
+			</div>
+		</div>		
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="model3.jpg" width="500px">
+		</div>
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Model 3</b><br>Range: <b style="color:#d3e847">220 Miles</b><br>Mileage : <b style="color:blue">5</b><br>Colour : <b style="color:blue">Dark Blue</b><br>Year : <b style="color:blue">2017</b><br>Doors : <b style="color:green">5</b><br>Fuel : <b style="color:blue">Electric</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>The dual motor electric Model 3. When one engine isn't enough; comes with extra batteries.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>35,000 GBP</h1>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="semi.jpg" width="500px">
+		</div>
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Semi</b><br>Range: <b style="color:green">500 Miles</b><br>Mileage : <b style="color:blue">5</b><br>Colour : <b style="color:grey">White</b><br>Year : <b style="color:blue">2017</b><br>Doors : <b style="color:grey">2</b><br>Fuel : <b style="color:blue">Electric</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>Have you ever seen an electric truck? Well now you have.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>140,000 GBP</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" id="renaults" style="display:none">
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="kwid.jpg" width="500px">
+		</div>
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Kwid</b><br>Engine: <b style="color:red">0.8L</b><br>Mileage : <b style="color:green">7200</b><br>Colour : <b style="color:grey">Grey</b><br>Year : <b style="color:green">2015</b><br>Doors : <b style="color:red">5</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>Renault Kwid is a spacious and modern family car. Bring your pet too!</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>28,000 GBP</h1>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="clio.jpg" width="500px">
+		</div>	
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Clio</b><br>Engine: <b style="color:green">1.6L</b><br>Mileage : <b style="color:green">700</b><br>Colour : <b style="color:blue">Blue</b><br>Year : <b style="color:green">2004</b><br>Doors : <b style="color:green">5</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>Enjoyable and confortable. Driving around in the Clio is a treat.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>14,000 GBP</h1>
+			</div>
+		</div>		
+	</div>
+	<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="twingo.jpg" width="500px">
+		</div>
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Twingo</b><br>Engine: <b style="color:#d3e847">1.0L</b><br>Mileage : <b style="color:#d3e847">92000</b><br>Colour : <b style="color:grey">White</b><br>Year : <b style="color:grey">2010</b><br>Doors : <b style="color:red">3</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>A smaller yet still confortable Renault Twingo. Now you can finally fit in those parking spaces.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>12,000 GBP</h1>
+			</div>
+		</div>			
+	</div>
+		<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="scenic.jpg" width="500px">
+		</div>	
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Scenic</b><br>Engine: <b style="color:green">1.6L</b><br>Mileage : <b style="color:red">240000</b><br>Colour : <b style="color:orange">Orange</b><br>Year : <b style="color:grey">2012</b><br>Doors : <b style="color:green">5</b><br>Fuel : <b style="color:brown">Diesel</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>A minivan with style. Not too big not too small.</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>16,000 GBP</h1>
+			</div>
+		</div>			
+	</div>
+		<hr>
+	<div class="row align-items-center">
+		<div class="col-6 text-center">
+			<img class="img-fluid" src="Captur.jpg" width="500px">
+		</div>
+		<div class="col-6 text-center">
+			<div class="row">
+				<div class="col-6 text-center">
+					<p class="text-left">Model : <b style="color:grey">Captur</b><br>Engine: <b style="color:green">1.2L</b><br>Mileage : <b style="color:green">900</b><br>Colour : <b style="color:orange">Orange</b><br>Year : <b style="color:grey">2015</b><br>Doors : <b style="color:green">5</b><br>Fuel : <b style="color:grey">Gasoline</b></p>
+				</div>
+				<div class="col-6 text-left">
+					<p><i>Even more space for even bigger endeavours. Capture the Captur today!</i></p>
+				</div>
+			</div>
+			<div style="margin-top:10%">
+				<h1>22,000 GBP</h1>
+			</div>
+		</div>	
+	</div>
+</div>
+<hr>
+	<footer style="text-align:center; font-size:10px; padding:5px; color:grey;"><p>Copyright © 1998-2019 Hightown Motors Inc. All Rights Reserved.</p></footer>
+  </body>
+</html>

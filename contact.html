@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/366AB792-C9F1-7441-82F3-718E675FD87D/main.js" charset="UTF-8"></script><script>
+	var quote = ["<q><i>You cannot shake hands with a clenched fist.</i></q> - Indira Gandhi","<q><i>There is nothing permanent except change.</i></q> - Heraclitus","<q><i>If you cannot do great things, do small things in a great way.</i></q> - Napoleon Hill","<q><i>Keep your face always toward the sunshine - and shadows will fall behind you.</i></q> - Walt Whitman","<q><i>You can't blame gravity for falling in love.</i></q> - Albert Einstein"];
+	var number = 0;
+	function Quoter1(){
+		document.getElementById("quote").style.color = "white";
+		setTimeout(Quoter2,2000);
+	}
+	function Quoter2(){
+		Quoter3()
+		document.getElementById("quote").innerHTML= quote[number];
+		number += 1;
+		if (number > 4){
+			number = 0;
+		}
+	}
+	function Quoter3(){
+		document.getElementById("quote").style.color = "grey";
+		setTimeout(Quoter1,6000);
+	}
+    </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Hightown Motors</title>
+  </head>
+  <body onload="Quoter1()">
+    <div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+	<li class="nav-item">
+        <a class="nav-link" href="browse.html">Browse</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" id="quote" style="transition:color 2s"></a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <p class="card-text" style="font-size:50px">Contacts</p>
+	<div class="card text-left" style="padding:100px">
+	<div class="row align-items-center">
+		<div class="col-6 text-left"><p style="font-size:50px"><img src="phone.png" width="40px"><i> : 028 908 484 33 <br><img src="fax.png" width="50px"> : 028 908 449 24</i><br><img src="map.png" width="50px"> : 96-100 Hightown Road Glengormley Co Antrim BT36 7AU</p></div>
+		<div class="col-6 text-center"><iframe class="embed-responsive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1631.5979038718206!2d-5.96946509251194!3d54.666896667984574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861a7c6c33642fb%3A0xda98382568bc1b40!2sEdmund+Rice+College!5e0!3m2!1spl!2suk!4v1552510686258" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+	</div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<footer style="text-align:center; font-size:10px; padding:5px; color:grey;"><p>Copyright © 1998-2019 Hightown Motors Inc. All Rights Reserved.</p></footer>
+  </body>
+</html>

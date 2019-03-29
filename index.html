@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script>
+	var quote = ["<q><i>You cannot shake hands with a clenched fist.</i></q> - Indira Gandhi","<q><i>There is nothing permanent except change.</i></q> - Heraclitus","<q><i>If you cannot do great things, do small things in a great way.</i></q> - Napoleon Hill","<q><i>Keep your face always toward the sunshine - and shadows will fall behind you.</i></q> - Walt Whitman","<q><i>You can't blame gravity for falling in love.</i></q> - Albert Einstein"];
+	var number = 0;
+	function Quoter1(){
+		document.getElementById("quote").style.color = "white";
+		setTimeout(Quoter2,2000);
+	}
+	function Quoter2(){
+		Quoter3()
+		document.getElementById("quote").innerHTML= quote[number];
+		number += 1;
+		if (number > 4){
+			number = 0;
+		}
+	}
+	function Quoter3(){
+		document.getElementById("quote").style.color = "grey";
+		setTimeout(Quoter1,6000);
+	}
+    </script>
+    <style>
+	#parallax{
+	background-image: url("71.jpg");
+	background-color: #ebedee;
+ 	/* Set a specific height */
+	height: 750px;
+	width: 100%;
+
+ 	/* Create the parallax scrolling effect */
+ 	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-size:100%;
+	}
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Hightown Motors</title>
+  </head>
+  <body id="body" onload="Quoter1()">
+	<header>
+	<div align="center"><img src="Hightown.png" height="100%" width="100%" alt="Hightown Motors Logo"></div>
+	</header>
+    <div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+	<li class="nav-item">
+        <a class="nav-link" href="browse.html">Browse</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" id="quote" style="transition:color 2s"></a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <p class="card-text" style="font-size:50px;">The Car Specialists</p>
+	<div class="card-body" style="padding:0px; align-items:center;"><p style="font-size:20px;"><i>We stock quality new and used cars. The majority of our used cars come with a 12 month warranty. Our stock includes most makes and models of cars.</i><br><hr>Hightown Motors is a small family-run car business. It opened in 1998 on the
+Hightown Road in Newtownabbey and employs 13 people. Hightown Motors stock a range of cars, including classic and high end cars, as
+well as family cars and hatchbacks. They offer a range of cars to cater for every budget.</p>
+		<iframe style="padding-left:10%; padding-right:10%" class="embed-responsive" width="660" height="415" src="https://www.youtube.com/embed/X91ALk2uKgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<br>
+    <a href="browse.html" style="padding-left:50px; padding-right:50px; font-size:20px" class="btn btn-primary" id="btn">Browse for Your Own Car Today!</a>
+	  </div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<footer style="text-align:center; font-size:10px; padding:5px; color:grey;"><p>Copyright © 1998-2019 Hightown Motors Inc. All Rights Reserved.</p></footer>
+  </body>
+</html>
